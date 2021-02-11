@@ -1,12 +1,12 @@
 <?php
-
+/*  Création de la Classe "Compte"   */
 class Account
 {
     private $label;
     private $balance;
     private $currency;
     private $owner;
-
+/* construction avec "Owner" en clé étrangère*/
     public function __construct ($label, $balance, $currency, Owner $owner)
     {
         $this -> label = $label;
