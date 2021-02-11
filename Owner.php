@@ -1,12 +1,12 @@
 <?php
-
+/* Création de la classe "Titulaire" */
 class Owner 
 {   
     private $name;
     private $surname;
     private $birthdate;
     private $city;
-    
+   
     public function __construct($name, $surname, $birthdate, $city)
     {
         $this -> name = $name;
@@ -94,7 +94,9 @@ class Owner
 
         return $this;
     }
-
+    
+/* fonction permettant de définir tous les comptes d'un titulaire pour un tableau donné */
+    
     function allAccounts($array, $owner)
     {
         foreach ($array as $value)
@@ -106,6 +108,9 @@ class Owner
             }    
         }
     }
+    
+    /* fonction permettant de définir l'âge à partir de la date de naissance du titulaire */
+    
     public function getAge()
     {
         $date1 = new DateTime('now');
